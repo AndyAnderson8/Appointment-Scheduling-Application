@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="395.0" prefWidth="700.0" style="-fx-background-color: #F0F0F0;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="andyanderson.appointments.controllers.Login">
+   <children>
+      <AnchorPane layoutX="150.0" layoutY="100.0" prefHeight="195.0" prefWidth="400.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+         <children>
+            <VBox layoutX="63.0" layoutY="75.0" spacing="4.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT">
+                     <children>
+                        <Label fx:id="usernameLabel" prefWidth="100.0" text="Username" />
+                        <TextField fx:id="usernameField" maxWidth="-Infinity" prefWidth="200.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT">
+                     <children>
+                        <Label fx:id="passwordLabel" prefWidth="100.0" text="Password" />
+                        <TextField fx:id="passwordField" maxWidth="-Infinity" prefWidth="200.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Button fx:id="submitButton" layoutX="150.0" layoutY="150.0" mnemonicParsing="false" onAction="#submitLogin" prefWidth="100.0" style="-fx-background-color: DeepSkyBlue;" text="Submit" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Text fx:id="titleLabel" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Scheduling Login" textAlignment="CENTER" wrappingWidth="400.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Text fx:id="locationLabel" layoutY="375.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Connected: America/Los_Angeles" textAlignment="CENTER" underline="true" wrappingWidth="700.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="395.0" prefWidth="700.0" style="-fx-background-color: #F0F0F0;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="andyanderson.appointments.controllers.Menu">
+   <children>
+      <AnchorPane layoutX="150.0" layoutY="100.0" prefHeight="195.0" prefWidth="400.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+         <children>
+            <Button layoutX="150.0" layoutY="150.0" mnemonicParsing="false" onAction="#logout" prefWidth="100.0" style="-fx-background-color: White; -fx-border-color: Grey; -fx-border-radius: 5;" text="Logout" />
+            <Text layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Tool" textAlignment="CENTER" wrappingWidth="400.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <Button layoutX="45.0" layoutY="70.0" mnemonicParsing="false" onAction="#loadAppointments" prefWidth="150.0" style="-fx-background-color: Green;" text="Appointment Manager" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="205.0" layoutY="70.0" mnemonicParsing="false" onAction="#loadCustomers" prefWidth="150.0" style="-fx-background-color: Green;" text="Customer Manager" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="45.0" layoutY="105.0" mnemonicParsing="false" onAction="#loadReport" prefWidth="150.0" style="-fx-background-color: Green;" text="Generate Report" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="205.0" layoutY="105.0" mnemonicParsing="false" onAction="#viewLog" prefWidth="150.0" style="-fx-background-color: Green;" text="View Sign In Log" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Label fx:id="alertLabel" alignment="CENTER" prefWidth="700.0" style="-fx-background-color: DeepSkyBlue;" text="No appointments within 15 minutes" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

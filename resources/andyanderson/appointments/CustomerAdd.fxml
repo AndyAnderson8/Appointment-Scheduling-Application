@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="425.0" prefWidth="500.0" style="-fx-background-color: #F0F0F0;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="andyanderson.appointments.controllers.CustomerAdd">
+   <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add Customer" textAlignment="CENTER" wrappingWidth="500.0" y="45.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <AnchorPane layoutX="25.0" layoutY="70.0" prefHeight="330.0" prefWidth="450.0" style="-fx-border-color: gray; -fx-border-radius: 10;">
+         <children>
+            <VBox layoutX="50.0" layoutY="25.0" prefWidth="350.0" spacing="10.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0">
+                     <children>
+                        <Label prefWidth="125.0" text="Customer ID" />
+                        <TextField fx:id="idField" disable="true" editable="false" maxWidth="-Infinity" prefWidth="225.0" promptText="Auto Gen - Disabled" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="35.0">
+                     <children>
+                        <Label prefWidth="125.0" text="Name" />
+                        <TextField fx:id="nameField" maxWidth="-Infinity" prefWidth="225.0" promptText="John Doe" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="60.0">
+                     <children>
+                        <Label prefWidth="125.0" text="Phone" />
+                        <TextField fx:id="phoneField" maxWidth="-Infinity" prefWidth="225.0" promptText="555-123-4567" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="85.0">
+                     <children>
+                        <Label prefWidth="125.0" text="Street Address" />
+                        <TextField fx:id="streetAddressField" maxWidth="-Infinity" prefWidth="225.0" promptText="1234 Main Street" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="115.0">
+                     <children>
+                        <Label prefWidth="125.0" text="City" />
+                        <TextField fx:id="cityField" maxWidth="-Infinity" prefWidth="225.0" promptText="Los Angeles" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="110.0" spacing="25.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT">
+                           <children>
+                              <Label prefWidth="75.0" text="Division" />
+                              <ComboBox fx:id="divisionBox" disable="true" prefWidth="110.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="93.0" layoutY="10.0">
+                           <children>
+                              <Label prefWidth="75.0" text="Country" />
+                              <ComboBox fx:id="countryBox" onAction="#reloadDivisionOptions" prefWidth="110.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="177.0">
+                     <children>
+                        <Label fx:id="variableLabel" prefWidth="125.0" text="Postal Code" />
+                        <TextField fx:id="postalCodeField" maxWidth="-Infinity" prefWidth="225.0" promptText="90001" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Button layoutX="50.0" layoutY="280.0" mnemonicParsing="false" onAction="#addCustomer" prefWidth="150.0" style="-fx-background-color: White; -fx-border-color: Grey; -fx-border-radius: 5;" text="Save" />
+            <Button layoutX="250.0" layoutY="280.0" mnemonicParsing="false" onAction="#loadCustomerMain" prefWidth="150.0" style="-fx-background-color: White; -fx-border-color: Grey; -fx-border-radius: 5;" text="Cancel" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

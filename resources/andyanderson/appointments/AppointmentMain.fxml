@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="395.0" prefWidth="1757.0" style="-fx-background-color: #F0F0F0;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="andyanderson.appointments.controllers.AppointmentMain">
+   <children>
+      <Text layoutX="25.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointments" textAlignment="CENTER" wrappingWidth="1500.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TableView fx:id="appointmentTable" layoutX="25.0" layoutY="75.0" prefHeight="295.0" prefWidth="1500.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="91.0" text="Appointment ID" />
+          <TableColumn fx:id="titleColumn" prefWidth="153.0" text="Title" />
+            <TableColumn fx:id="descriptionColumn" minWidth="0.0" prefWidth="138.0" text="Description" />
+            <TableColumn fx:id="typeColumn" prefWidth="70.0" text="Type" />
+            <TableColumn fx:id="locationColumn" prefWidth="50.0" text="Location" />
+            <TableColumn fx:id="startTimeColumn" prefWidth="94.0" text="Start Time (Local)" />
+            <TableColumn fx:id="startDateColumn" prefWidth="81.0" text="Start Date" />
+            <TableColumn fx:id="endTimeColumn" prefWidth="81.0" text="End Time (Local)" />
+            <TableColumn fx:id="endDateColumn" prefWidth="81.0" text="End Date" />
+            <TableColumn fx:id="customerColumn" prefWidth="81.0" text="Customer" />
+            <TableColumn fx:id="contactColumn" prefWidth="81.0" text="Contact" />
+            <TableColumn fx:id="userColumn" prefWidth="81.0" text="User" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <AnchorPane layoutX="1550.0" layoutY="110.0" prefHeight="245.0" prefWidth="180.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: silver; -fx-border-radius: 10;">
+         <children>
+            <Button layoutX="15.0" layoutY="40.0" mnemonicParsing="false" onAction="#addAppointment" prefWidth="150.0" style="-fx-background-color: Green; -fx-background-radius: 5;" text="Add Appointment" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="15.0" layoutY="110.0" mnemonicParsing="false" onAction="#deleteAppointment" prefWidth="150.0" style="-fx-background-color: Red; -fx-background-radius: 5;" text="Delete Appointment" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Text layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Options" textAlignment="CENTER" underline="true" wrappingWidth="180.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Button layoutX="15.0" layoutY="200.0" mnemonicParsing="false" onAction="#loadMenu" prefWidth="150.0" style="-fx-background-color: White; -fx-border-color: Grey; -fx-border-radius: 5;" text="Return to Menu" />
+            <Text layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="―" textAlignment="CENTER" wrappingWidth="180.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Button layoutX="15.0" layoutY="165.0" mnemonicParsing="false" onAction="#loadCustomer" prefWidth="150.0" style="-fx-background-color: White; -fx-border-color: Grey; -fx-border-radius: 5;" text="View Customers" />
+            <Button layoutX="15.0" layoutY="75.0" mnemonicParsing="false" onAction="#modifyAppointment" prefWidth="150.0" style="-fx-background-color: Orange; -fx-background-radius: 5;" text="Modify Appointment" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <HBox layoutX="1250.0" layoutY="30.0" spacing="25.0">
+         <children>
+            <RadioButton mnemonicParsing="false" onAction="#showWeekView" text="Week">
+               <toggleGroup>
+                  <ToggleGroup fx:id="radio" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" onAction="#showMonthView" text="Month" toggleGroup="$radio" />
+            <RadioButton mnemonicParsing="false" onAction="#showAllView" selected="true" text="All Appointments" toggleGroup="$radio" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
